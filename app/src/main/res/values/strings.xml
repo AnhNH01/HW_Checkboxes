@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Checkboxes</string>
+    <string name="btn_text">Show toast</string>
+    <string name="checkBox_sprinkles">Sprinkles</string>
+    <string name="checkBox_crushed_nuts">Crushed Nuts</string>
+    <string name="checkBox_cherries">Cherries</string>
+    <string name="checkBox_oreo_cookie_crumbles">Oreo Cookie Crumbles</string>
+</resources>
