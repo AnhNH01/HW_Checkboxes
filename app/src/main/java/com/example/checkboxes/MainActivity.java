@@ -20,38 +20,74 @@ public class MainActivity extends AppCompatActivity {
 
         chocoSyrup = findViewById(R.id.checkBox_choco_syrup);
         chocoSyrup.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b)
-                message += compoundButton.getText() + " ";
+            String append = compoundButton.getText() + " ";
+            if (b) {
+                message += append;
+                //Log.d("Checked", message);
+            } else if (message.contains(append)) {
+                message = message.replace(append, "");
+                //Log.d("Unchecked", message);
+            }
         });
 
         sprinkles = findViewById(R.id.checkBox_sprinkles);
         sprinkles.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b)
-                message += compoundButton.getText() + " ";
+            String append = compoundButton.getText() + " ";
+            if (b) {
+                message += append;
+                //Log.d("Checked", message);
+            } else if (message.contains(append)) {
+                message = message.replace(append, "");
+                //Log.d("Unchecked", message);
+            }
         });
 
         crushedNut = findViewById(R.id.checkBox_crushed_nuts);
         crushedNut.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b)
-                message += compoundButton.getText() + " ";
+            String append = compoundButton.getText() + " ";
+            if (b) {
+                message += append;
+                //Log.d("Checked", message);
+            } else if (message.contains(append)) {
+                message = message.replace(append, "");
+                //Log.d("Unchecked", message);
+            }
         });
 
         cherries = findViewById(R.id.checkBox_cherries);
-        crushedNut.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b)
-                message += compoundButton.getText() + " ";
+        cherries.setOnCheckedChangeListener((compoundButton, b) -> {
+            String append = compoundButton.getText() + " ";
+            if (b) {
+                message += append;
+                //Log.d("Checked", message);
+            } else if (message.contains(append)) {
+                message = message.replace(append, "");
+                //Log.d("Unchecked", message);
+            }
         });
 
         cookiesCrumbles = findViewById(R.id.checkBox_oreo_cookie_crumbles);
-        crushedNut.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b)
-                message += compoundButton.getText() + " ";
+        cookiesCrumbles.setOnCheckedChangeListener((compoundButton, b) -> {
+            String append = compoundButton.getText() + " ";
+            if (b) {
+                message += append;
+                //Log.d("Checked", message);
+            } else if (message.contains(append)) {
+                message = message.replace(append, "");
+                //Log.d("Unchecked", message);
+            }
         });
 
         btn = findViewById(R.id.button);
         btn.setOnClickListener(view -> {
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
             message = "";
+            //Log.d("BtnClk", message);
+            chocoSyrup.setChecked(false);
+            sprinkles.setChecked(false);
+            crushedNut.setChecked(false);
+            cookiesCrumbles.setChecked(false);
+            cherries.setChecked(false);
         });
     }
 
